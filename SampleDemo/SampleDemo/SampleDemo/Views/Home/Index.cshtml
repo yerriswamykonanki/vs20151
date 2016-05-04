@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SampleDemo.Models.tblStudent>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h2>Students List</h2>
+    <table>
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+
+        </tr>
+        @foreach (var m in Model)
+        {
+            <tr>
+                <td>
+                    @m.ID
+                </td>
+                <td>
+                    <div>@m.Name</div>
+                </td>
+
+            </tr>
+        }
+    </table>
+</div>
